@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sidenav-list',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavListComponent implements OnInit {
 
+  @Output() toggleNavigation = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onToggleNavigation() {
+    this.toggleNavigation.emit();
   }
 
 }

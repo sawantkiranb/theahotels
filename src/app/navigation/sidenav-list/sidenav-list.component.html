@@ -1,17 +1,17 @@
-<mat-nav-list class="mat-nav-list">
-  <mat-list-item routerLink="/signin">
+<mat-nav-list class="sidenav-list">
+  <mat-list-item routerLink="/signin" (click)="onToggleNavigation()" >
     <mat-icon>input</mat-icon>
     <span>Signin</span>
   </mat-list-item>
-  <mat-list-item routerLink="/signup">
+  <mat-list-item routerLink="/signup" (click)="onToggleNavigation()" >
     <mat-icon>account_circle</mat-icon>
     <span>Signup</span>
   </mat-list-item>
-  <mat-list-item routerLink="/accomodation">
+  <mat-list-item routerLink="/accomodation" (click)="onToggleNavigation()" >
     <mat-icon>hotel</mat-icon>
     <span>Accomodation</span>
   </mat-list-item>
-  <mat-list-item routerLink="/offers">
+  <mat-list-item routerLink="/offers" (click)="onToggleNavigation()" >
     <mat-icon>loyalty</mat-icon>
     <span>Offers</span>
   </mat-list-item>
