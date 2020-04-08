@@ -1,11 +1,12 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <app-sidenav-list></app-sidenav-list>
+  </mat-sidenav>
 
-<button
-  mat-raised-button
-  color="primary"
-  matBadge="8"
-  matBadgePosition="before"
-  matBadgeColor="accent"
->
-  Action
-</button>
+  <mat-sidenav-content>
+    <app-header (sideNavigationToggle)="sidenav.toggle()"></app-header>
+    <app-navtabs></app-navtabs>
+  </mat-sidenav-content>
+
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
